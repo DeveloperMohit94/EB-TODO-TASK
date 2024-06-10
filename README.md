@@ -1,5 +1,18 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# To-Do List App
+
+A simple To-Do List app built with React Native, using Redux Toolkit for state management. The app allows users to add, edit, delete, and mark tasks as completed. It also fetches an initial list of tasks from an API and persists user-created tasks.
+
+## Features
+
+- **Add Task**: Users can add a new task with a title and description.
+- **Edit Task**: Users can edit an existing task.
+- **Delete Task**: Users can delete a task.
+- **Mark as Completed**: Users can mark a task as completed or uncompleted.
+- **Fetch Tasks**: On initial load, fetch a list of tasks from a provided API.
+- **Persist Tasks**: Ensure that user-created tasks are persisted across app restarts using local storage (e.g., Redux).
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
