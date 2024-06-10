@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Touchable, Text } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../../redux/tasksSlice';
 import { styles } from './style';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const AddTask: React.FC = () => {
   const [title, setTitle] = useState('');
@@ -24,7 +25,10 @@ export const AddTask: React.FC = () => {
         value={title}
         onChangeText={setTitle}
       />
-      <Button title="Add Task" onPress={handleAddTask} />
+      <TouchableOpacity style={styles.addButton} onPress={handleAddTask} >
+        <Text style={styles.addText}>Add Task
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };

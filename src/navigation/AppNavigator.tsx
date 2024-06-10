@@ -13,10 +13,10 @@ const Stack = createStackNavigator<RootStackParamList>();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="EditTask" component={EditTaskScreen} />
-    </Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="EditTask" component={EditTaskScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

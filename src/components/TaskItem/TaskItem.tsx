@@ -24,10 +24,10 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) 
         <Text style={styles.delete}>Delete</Text>
       </TouchableOpacity>
       <TouchableOpacity
-      style={styles.editButton}
-      onPress={() => navigation.navigate('EditTask',{taskId:task.id})}>
-                <Text style={styles.edit}>Edit</Text>
-              </TouchableOpacity>
+        style={styles.editButton}
+        onPress={() => navigation.navigate('EditTask', { taskId: task.id })}>
+        <Text style={styles.edit}>Edit</Text>
+      </TouchableOpacity>
     </View>
   );
 };

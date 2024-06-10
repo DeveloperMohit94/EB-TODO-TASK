@@ -9,14 +9,14 @@ import { RouteProp } from '@react-navigation/native';
 
 // Define the route parameters type
 type RootStackParamList = {
-    EditTask: { taskId: number };
-  };
-  
-  // Define the props type for the EditTaskScreen component
-  export interface EditTaskScreenProps {
-    navigation: StackNavigationProp<RootStackParamList, 'EditTask'>;
-    route: RouteProp<RootStackParamList, 'EditTask'>;
-  }
+  EditTask: { taskId: number };
+};
+
+// Define the props type for the EditTaskScreen component
+export interface EditTaskScreenProps {
+  navigation: StackNavigationProp<RootStackParamList, 'EditTask'>;
+  route: RouteProp<RootStackParamList, 'EditTask'>;
+}
 export const EditTaskScreen: React.FC<EditTaskScreenProps> = ({ route, navigation }) => {
   const { taskId } = route.params;
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ export const EditTaskScreen: React.FC<EditTaskScreenProps> = ({ route, navigatio
 
   const handleEditTask = () => {
     if (task) {
-      dispatch(editTask({ ...task, title,}));
+      dispatch(editTask({ ...task, title, }));
       navigation.goBack();
     }
   };
